@@ -1,75 +1,21 @@
-# libcoap: A C implementation of the Constrained Application Protocol (RFC 7252)
-
-[![Build Status: master](https://travis-ci.com/obgm/libcoap.svg?branch=master)](https://travis-ci.com/github/obgm/libcoap/branches)
-[![Build Status: develop](https://travis-ci.com/obgm/libcoap.svg?branch=develop)](https://travis-ci.com/github/obgm/libcoap/branches)
-[![Static Analysis](https://scan.coverity.com/projects/10970/badge.svg?flat=1)](https://scan.coverity.com/projects/obgm-libcoap)
-[![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/libcoap.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:libcoap)
-![CMake](https://github.com/obgm/libcoap/workflows/CMake/badge.svg)
-
-Copyright (C) 2010—2020 by Olaf Bergmann <bergmann@tzi.org> and others
-
-ABOUT LIBCOAP
-=============
-
-libcoap is a C implementation of a lightweight application-protocol
-for devices that are constrained their resources such as computing
-power, RF range, memory, bandwidth, or network packet sizes. This
-protocol, CoAP, is standardized by the IETF as RFC 7252. For further
-information related to CoAP, see <http://coap.technology>.
-
-You might want to check out
-[libcoap-minimal](https://github.com/obgm/libcoap-minimal) for usage
-examples.
-
-DOCUMENTATION
-=============
-
-Documentation and further information can be found at
-<https://libcoap.net>.
-
-PACKAGE CONTENTS
-================
-
-This package contains a protocol parser and basic networking
-functions for platforms with support for malloc() and BSD-style
-sockets. In addition, there is support for Contiki, LwIP and
-Espressif/ESP-IDF hosted environments.
-
-The following RFCs are supported
-
-* RFC7252: The Constrained Application Protocol (CoAP)
-
-* RFC7641: Observing Resources in the Constrained Application Protocol (CoAP)
-
-* RFC7959: Block-Wise Transfers in the Constrained Application Protocol (CoAP)
-
-* RFC7967: Constrained Application Protocol (CoAP) Option for No Server Response
-
-* RFC8132: PATCH and FETCH Methods for the Constrained Application Protocol (CoAP)
-
-* RFC8323: CoAP (Constrained Application Protocol) over TCP, TLS, and WebSockets
-  [No WebSockets support]
-
-* RFC8768: Constrained Application Protocol (CoAP) Hop-Limit Option
-
-There is (D)TLS support for the following libraries
-
-* OpenSSL (Minimum version 1.1.0) [PKI, PSK and PKCS11]
-
-* GnuTLS (Minimum version 3.3.0) [PKI, PSK, RPK(3.6.6+) and PKCS11]
-
-* MbedTLS (Minimum version 2.7.10) [PKI and PSK] [Currently only DTLS]
-
-* TinyDTLS [PSK and RPK] [DTLS Only]
-
-The examples directory contain a CoAP client, CoAP Resource Directory server
-and a CoAP server to demonstrate the use of this library.
+ This is a fork of [libcoap](https://github.com/obgm/libcoap).
+ 
 
 BUILDING
 ========
 
-Further information can be found at <https://libcoap.net/install.html>
-and [BUILDING](https://raw.githubusercontent.com/obgm/libcoap/develop/BUILDING).
+```
+  Build for windows:
+  1. Open libcoap\win32\libcoap.sln with visual studio
+  2. Add openssl include and lib directory if need,  openssl version need higher than 1.1.0
+  3. Build it.
+  
+  Build for linux:
+  1. ./autogen.sh
+  2. ./configure
+  3. make
+  4. make install
+```
 
 LICENSE INFORMATION
 ===================
