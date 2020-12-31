@@ -1,4 +1,5 @@
  This is a fork of [libcoap](https://github.com/obgm/libcoap).
+ I am using libcoap in windows environment, the origin code sometimes has some compile error in windows, so I create this to fix them. 
  
 
 BUILDING
